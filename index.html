@@ -1,0 +1,70 @@
+<html>
+
+<head>
+</head>
+
+<body>
+    <header>
+        <h1>Seja Bem Vindo ao Formulário de Cadastro </h1>
+
+    </header>
+    <section>
+        <p>Os campos com * são de preenchimento obrigatório</p>
+    </section>
+    <label for="txt-nome">nome *</label>
+    <input type="text" id="txt-nome" /><br/>
+    <label for="txt-cpf">cpf *</label>
+    <input type="text" id="txt-cpf" /><br/>
+    <label for="txt-rg">rg</label>
+    <input type="text" id="txt-rg" /><br/>
+    <label for="sexo">sexo</label>
+    <select id="sexo">
+<option value="">selecione uma opção</option>
+<option value="M">masculino</option>
+<option value="F">feminino</option>
+</select><br/>
+    <label for="endereco">endereço *</label>
+    <input type="text" id="endereco" /><br/>
+    <label for="numero">numero *</label>
+    <input type="text" id="numero" /><br/>
+    <label for="bairro">bairro</label>
+    <input type="text" id="bairro" /><br/>
+    <label for="cidade">cidade</label>
+    <input type="text" id="cidade" /><br/>
+    <label for="estado">estado</label>
+    <input type="text" id="estado" /><br/>
+    <label for="cep">cep</label>
+    <input type="text" id="cep" /><br/>
+    <label for="telefone-fixo">telefone fixo</label>
+    <input type="text" id="telefone-fixo" /><br/>
+    <label for="telefone-celular">telefone celular *</label>
+    <input type="text" id="telefone-celular" /><br/>
+    <button onclick="salvar()">salvar</button>
+
+    <script type="text/javascript">
+        function salvar() {
+            var nome = document.getElementById("txt-nome").value;
+            var cpf = document.getElementById("txt-cpf").value;
+            var endereco = document.getElementById("endereco").value;
+            var numero = document.getElementById("numero").value;
+            var celular = document.getElementById("telefone-celular").value;
+
+            if (nome == "") {
+                alert("por favor preencha o nome");
+            } else if (cpf == "") {
+                alert("por favor preencha o cpf");
+            } else if (endereco == "") {
+                alert(" porfavor preencha o endereco");
+            } else if (numero == "") {
+                alert("por favor preencha o numero");
+            } else if (celular == "") {
+                alert("por favor preencha o celular");
+            } else {
+                //enviar os dados para back end
+                alert("os dados foram enviados com sucesso");
+            }
+        }
+    </script>
+</body>
+
+</html>
